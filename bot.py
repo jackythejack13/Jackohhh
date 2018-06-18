@@ -1,4 +1,4 @@
-import discord, logging, json, os, sys
+import discord, logging, json, os, sys, traceback
 from discord.ext import commands
 from time import sleep
 
@@ -17,7 +17,14 @@ print('Starting Bot...')
 
 @client.event
 async def on_message(msg):
+	if msg.content.startswith('example error') and msg.author.id == '183527322236878850':
+		raise ValueError('Custom Error')
 	return
+
+@client.event
+async def on_error(err,*args,**kwargs):
+	error = traceback.form_exc()
+	await client.send_message(errorChannel,'<@183527322236878850>\n```{}```'.format(error))
 
 @client.event
 async def on_ready():
