@@ -23,7 +23,7 @@ async def on_message(msg):
 
 @client.event
 async def on_error(err,*args,**kwargs):
-	error = traceback.form_exc()
+	error = traceback.format_exc()
 	await client.send_message(errorChannel,'<@183527322236878850>\n```{}```'.format(error))
 
 @client.event
