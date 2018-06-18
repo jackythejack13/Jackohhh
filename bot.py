@@ -123,4 +123,4 @@ async def invite(context):
 	await bot.send_message(context.message.author,"Your invite URL is {}".format(invite.url))
 
 if __name__ == '__main__':
-	bot.run('your-token-here')
+	bot.run(os.environ['TOKEN'])
