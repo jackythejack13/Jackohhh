@@ -17,6 +17,8 @@ print('Starting Bot...')
 
 @client.event
 async def on_message(msg):
+	if msg.author.bot:
+		return
 	if msg.content.startswith('example error') and msg.author.id == '183527322236878850':
 		raise ValueError('Custom Error')
 	return
