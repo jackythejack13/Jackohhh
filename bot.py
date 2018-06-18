@@ -1,4 +1,4 @@
-import discord, logging, json
+import discord, logging, json, os, sys
 from discord.ext import commands
 
 # Define all variables to be used around the script
