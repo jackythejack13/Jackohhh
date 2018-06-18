@@ -13,7 +13,7 @@ Users = Query()
 
 # Print the starting text
 print('---------------')
-print('Nerdle Bot')
+print('Jackohhh Bot')
 print('---------------')
 print('Starting Bot...')
 
