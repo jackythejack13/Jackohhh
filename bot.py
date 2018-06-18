@@ -28,6 +28,7 @@ async def on_error(err,*args,**kwargs):
 
 @client.event
 async def on_ready():
+	global errorChannel
 	for server in client.servers:
 		if server.id == '327604485386010636':
 			for channel in server.channels:
