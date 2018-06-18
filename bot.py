@@ -1,5 +1,6 @@
 import discord, logging, json, os, sys
 from discord.ext import commands
+from time import sleep
 
 # Define all variables to be used around the script
 description = '''Bot description here'''
@@ -28,6 +29,8 @@ async def on_ready():
 					break
 			break
 	print('BOT LOADED')
+	await client.change_presence(game=discord.Game(name='Spotify',type=2),status=discord.Status.idle)
+	sleep(5)
 	print('Error logging channel: {}'.format(errorChannel.name))
 	await client.change_presence(game=discord.Game(name='Spotify',type=2),status=discord.Status.dnd)
 	await client.send_message(errorChannel,'I TOO HAVE BEEN REBORN!!!!!!')
