@@ -7,13 +7,13 @@ from tinydb.operations import delete,increment
 
 # Define all variables to be used around the script
 description = '''Bot description here'''
-bot = commands.Bot(command_prefix='~', description=description)
+bot = commands.Bot(command_prefix='>', description=description)
 db = TinyDB('data.json')
 Users = Query()
 
 # Print the starting text
 print('---------------')
-print('Sample Bot')
+print('Nerdle Bot')
 print('---------------')
 print('Starting Bot...')
 
