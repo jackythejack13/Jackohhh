@@ -20,6 +20,7 @@ async def on_message(msg):
 @client.event
 async def on_ready():
 	print('BOT LOADED')
+	await client.change_presence(game=discord.Game(name='Spotify',type=2),status=discord.Status.dnd)
 	return
 
 if __name__ == '__main__':
