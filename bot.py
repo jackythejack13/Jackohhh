@@ -26,7 +26,7 @@ async def on_message(msg):
 		#command handling goes here
 		content = msg.content.replace('>','')
 		if content.startswith('ping'):
-			await misc.ping(client,message)
+			await misc.ping(client,msg)
 	return
 
 @client.event
