@@ -22,6 +22,11 @@ async def on_message(msg):
 		return
 	if msg.content.startswith('example error') and msg.author.id == '183527322236878850':
 		raise ValueError('Custom Error')
+	if msg.content.startswith('>'):
+		#command handling goes here
+		content = msg.content.replace('>','')
+		if content.startswith('ping'):
+			await misc.ping(client,message)
 	return
 
 @client.event
