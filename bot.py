@@ -1,6 +1,7 @@
 import discord, logging, json, os, sys, traceback
 from discord.ext import commands
 from time import sleep
+from commands import fun, mod, misc, music
 
 # Define all variables to be used around the script
 description = '''Bot description here'''
